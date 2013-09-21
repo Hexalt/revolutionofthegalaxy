@@ -168,6 +168,8 @@ class BattleCalculator {
 						if ($dm->does_player_know_development($player, "Battlefield Immunity")) {
 // Commented out to allow BFI creatures to be captured
 //							$fd->creatures_lost["$creature"] = 0; 
+							if ($defender_has_capture_mastery) {
+								$fd->creatures_lost["Screature"] += $fd->creatures_killed["$creature"] * capturerate }// make capture rate value
 							$fd->creatures_killed["$creature"] = 0; 
 						}
 
